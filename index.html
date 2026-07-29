@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HONDA ELITE | Motocicletas Honda</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#111;
+color:white;
+}
+
+header{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('https://images.honda.com/motorcycles/racing/crf450r.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+animation:entrada 2s;
+}
+
+@keyframes entrada{
+from{
+opacity:0;
+transform:scale(1.1);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+header h1{
+font-size:70px;
+color:#ff0000;
+text-shadow:4px 4px 15px black;
+}
+
+header p{
+font-size:24px;
+margin-top:15px;
+}
+
+header button{
+margin-top:35px;
+padding:15px 40px;
+font-size:20px;
+background:red;
+color:white;
+border:none;
+border-radius:50px;
+cursor:pointer;
+transition:.3s;
+}
+
+header button:hover{
+background:white;
+color:red;
+transform:scale(1.08);
+}
+
+.titulo{
+text-align:center;
+font-size:40px;
+padding:45px;
+color:red;
+}
+
+.contenedor{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+padding:20px;
+}
+
+.producto{
+background:#222;
+width:320px;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 0 20px rgba(255,0,0,.35);
+transition:.4s;
+}
+
+.producto:hover{
+transform:translateY(-10px);
+}
+
+.producto img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.producto h3{
+padding:15px;
+font-size:24px;
+}
+
+.producto p{
+padding:0 15px 15px;
+color:#ddd;
+}
+
+.precio{
+font-size:25px;
+font-weight:bold;
+color:#ff4444;
+}
+
+.comprar{
+width:90%;
+margin:15px;
+padding:12px;
+background:red;
+color:white;
+border:none;
+border-radius:8px;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+.comprar:hover{
+background:white;
+color:red;
+}
+
+.contacto{
+margin-top:50px;
+background:#1b1b1b;
+padding:40px;
+text-align:center;
+}
+
+.contacto a{
+display:block;
+margin:12px;
+text-decoration:none;
+color:white;
+font-size:20px;
+}
+
+.contacto a:hover{
+color:red;
+}
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.7);
+justify-content:center;
+align-items:center;
+}
+
+.popup-contenido{
+background:white;
+color:black;
+padding:30px;
+border-radius:15px;
+text-align:center;
+max-width:400px;
+animation:zoom .4s;
+}
+
+@keyframes zoom{
+from{
+transform:scale(.5);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
+}
+
+.popup img{
+width:90px;
+margin-bottom:15px;
+}
+
+.cerrar{
+margin-top:20px;
+padding:10px 30px;
+background:red;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+footer{
+background:black;
+padding:20px;
+text-align:center;
+color:#bbb;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>CRF ZONE HONDA </h1>
+
+<p>Donde la potencia se convierte en pasión.</p>
+
+<button onclick="document.getElementById('motos').scrollIntoView({behavior:'smooth'})">
+Ver Catálogo
+</button>
+
+</header>
+
+<h2 class="titulo" id="motos">
+🏁 MODELOS HONDA CRF DISPONIBLES 🏁
+</h2>
+
+<div class="contenedor">
+<div class="producto">
+
+<img src="https://dirtbikemagazine.com/wp-content/uploads/2026/05/27-Honda-CRF450R_RHP-scaled.jpg" alt="Honda CRF450-R">
+
+<h3>Honda CRF450-R</h3>
+
+<p>Motocicleta de motocross de competición de alta potencia, con un motor de 449.7 cc y un peso aproximado de 108 kg. Está diseñada para ofrecer velocidad máxima y un manejo muy ágil en circuitos de tierra.</p>
+
+<p class="precio">Q95,000</p>
+
+<button class="comprar" onclick="mostrarPopup('Honda CRF450-R')">Comprar</button>
+
+</div>
+
+<div class="producto">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPHkvz6OrwVqnJ8rmwz09V8Q_q9RhAAq8npuXW-DeORQ&s=10" alt="Honda CRF250-R">
+
+<h3>Honda CRF250-R</h3>
+
+<p>Motocicleta de alta competición diseñada exclusivamente para la práctica del motocross. Destaca por su motor monocilíndrico de cuatro tiempos de 249,4 cc de altas revoluciones y un sofisticado heredado de las carreras.</p>
+
+<p class="precio">Q84,500</p>
+
+<button class="comprar" onclick="mostrarPopup('Honda CRF250-R')">Comprar</button>
+
+</div>
+
+<div class="producto">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWjpeznFXgpmG6xMJwOMAyewZJ4iTfy53ttM8hwc-25w&s=10" alt="HONDA CRF50-F">
+
+<h3>HONDA CRF50-F</h3>
+
+<p>Esta motocicleta off-road está diseñada específicamente para que los pequeños corredores y principiantes se inicien en el deporte del motociclismo de forma segura y divertida..</p>
+
+<p class="precio">Q18,790</p>
+
+<button class="comprar" onclick="mostrarPopup('Honda CRF50-F')">Comprar</button>
+
+</div>
+
+</div>
+<div class="contacto">
+
+<h2>📞 Contáctanos</h2>
+
+<p>¡Tu próxima Honda te está esperando!</p>
+
+<br>
+
+<a href="https://wa.me/50250642199" target="_blank">
+📱 WhatsApp: +502 5064 2199
+</a>
+
+<a href="tel:+50250642199">
+📞 Llamar: +502 5064 2199
+</a>
+
+<a href="mailto:crfzonehondagt@gmail.com">
+📧 Correo: crfzonehondagt@gmail.com
+</a>
+
+</div>
+
+<div class="popup" id="popup">
+
+<div class="popup-contenido">
+
+<h2>✅ ¡Pedido recibido con éxito!</h2>
+
+<p id="mensajeProducto"></p>
+
+<button class="cerrar" onclick="cerrarPopup()">Aceptar</button>
+
+</div>
+
+</div>
+
+<footer>
+
+<h3>HONDA ELITE</h3>
+
+<p>🏍️ Potencia • Calidad • Confianza 🏍️</p>
+
+<p>© 2026 CRF ZONE HONDA | Todos los derechos reservados.</p>
+
+</footer>
+
+<script>
+
+function mostrarPopup(producto){
+document.getElementById("mensajeProducto").innerHTML =
+"<strong>Has solicitado " + producto + ".</strong><br><br>¡Gracias por elegir CRF ZONE HONDA GT! Muy pronto nos comunicaremos contigo.";
+
+document.querySelector(".popup h2").innerHTML =
+"✅ ¡Pedido recibido con éxito!";
+
+document.getElementById("popup").style.display="flex";
+
+}
+
+function cerrarPopup(){
+
+document.getElementById("popup").style.display="none";
+
+}
+
+</script>
+
+document.getElementById("mensajeProducto").innerHTML =
+"Has
